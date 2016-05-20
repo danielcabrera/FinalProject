@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="BDLINQ">
+  <DataContextMoniker Name="/BDLINQDataContext" />
+  <nestedChildShapes>
+    <classShape Id="1d85b5fc-ead9-4928-ac6e-dd92dbcc7988" absoluteBounds="1.75, 2.125, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/BDLINQDataContext/Usuarios" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dd20a314-c956-4eef-b0b2-731a1bea1f52" absoluteBounds="1.7650000000000001, 2.585, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="52628823-6798-469a-902e-35e332a3c787" absoluteBounds="5.375, 4, 2, 1.3862939453125">
+      <DataClassMoniker Name="/BDLINQDataContext/PuntuacionUsuario" />
+      <nestedChildShapes>
+        <elementListCompartment Id="69167b61-4704-4030-99ce-f7898073e4a6" absoluteBounds="5.39, 4.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(3.75 : 4.42870198567708); (4.47916416666667 : 4.42870198567708 : JumpStart); (4.64583083333333 : 4.42870198567708 : JumpEnd); (5.375 : 4.42870198567708)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BDLINQDataContext/Usuarios/Usuarios_PuntuacionUsuario" />
+      <nodes>
+        <classShapeMoniker Id="1d85b5fc-ead9-4928-ac6e-dd92dbcc7988" />
+        <classShapeMoniker Id="52628823-6798-469a-902e-35e332a3c787" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="cf170227-749c-482c-8374-c97a5dd4535c" absoluteBounds="3.5, 0.625, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/BDLINQDataContext/Puntuaciones" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3833ad96-e26d-4dd9-b1a0-28b691b29045" absoluteBounds="3.515, 1.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.5624975 : 1.81899251302083); (4.5624975 : 5.15309895833333); (5.375 : 5.15309895833333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BDLINQDataContext/Puntuaciones/Puntuaciones_PuntuacionUsuario" />
+      <nodes>
+        <classShapeMoniker Id="cf170227-749c-482c-8374-c97a5dd4535c" />
+        <classShapeMoniker Id="52628823-6798-469a-902e-35e332a3c787" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="8b98cf36-7ebc-406d-ad8c-72e5a0442cbd" absoluteBounds="1.75, 6, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/BDLINQDataContext/Perfil" />
+      <nestedChildShapes>
+        <elementListCompartment Id="691d1864-da1b-441e-85be-f1a2a107ed8e" absoluteBounds="1.7650000000000001, 6.46, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 6); (2.75 : 4.85740397135417)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BDLINQDataContext/Perfil/Perfil_Usuarios" />
+      <nodes>
+        <classShapeMoniker Id="8b98cf36-7ebc-406d-ad8c-72e5a0442cbd" />
+        <classShapeMoniker Id="1d85b5fc-ead9-4928-ac6e-dd92dbcc7988" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="436b6398-4757-4433-833a-3e3da713a1a0" absoluteBounds="6.375, 2, 2, 1.3862939453125">
+      <DataClassMoniker Name="/BDLINQDataContext/Lugar" />
+      <nestedChildShapes>
+        <elementListCompartment Id="92518cf7-6665-4aaa-a0c8-757393d1ac3d" absoluteBounds="6.3900000000000006, 2.46, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.375 : 2.75564697265625); (4.64583083333333 : 2.75564697265625 : JumpStart); (4.47916416666667 : 2.75564697265625 : JumpEnd); (3.75 : 2.75564697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BDLINQDataContext/Lugar/Lugar_Usuarios" />
+      <nodes>
+        <classShapeMoniker Id="436b6398-4757-4433-833a-3e3da713a1a0" />
+        <classShapeMoniker Id="1d85b5fc-ead9-4928-ac6e-dd92dbcc7988" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="468468da-302f-40a8-8405-8d88f4046d30" absoluteBounds="5.75, 6.25, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/BDLINQDataContext/Juegos" />
+      <nestedChildShapes>
+        <elementListCompartment Id="de73ca8e-e5b6-4de6-a97c-32d16a8c5e03" absoluteBounds="5.765, 6.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.5625 : 6.25); (6.5625 : 5.3862939453125)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/BDLINQDataContext/Juegos/Juegos_PuntuacionUsuario" />
+      <nodes>
+        <classShapeMoniker Id="468468da-302f-40a8-8405-8d88f4046d30" />
+        <classShapeMoniker Id="52628823-6798-469a-902e-35e332a3c787" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="60958dc4-6491-44da-898a-6357ddfb6998" absoluteBounds="0.5, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/BDLINQDataContext/seguidores" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9e85ca30-a52e-4207-99d8-da1db57051a1" absoluteBounds="0.51500000000000012, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.125 : 2.125); (2.125 : 1.8862939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BDLINQDataContext/Usuarios/Usuarios_seguidores" />
+      <nodes>
+        <classShapeMoniker Id="1d85b5fc-ead9-4928-ac6e-dd92dbcc7988" />
+        <classShapeMoniker Id="60958dc4-6491-44da-898a-6357ddfb6998" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.375 : 2.125); (2.375 : 1.8862939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/BDLINQDataContext/Usuarios/Usuarios_seguidores1" />
+      <nodes>
+        <classShapeMoniker Id="1d85b5fc-ead9-4928-ac6e-dd92dbcc7988" />
+        <classShapeMoniker Id="60958dc4-6491-44da-898a-6357ddfb6998" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

@@ -1,0 +1,10 @@
+C:\Users\BEC.SDA2\Desktop\FinalProject\FinalProject\bin\FinalProject.dll
+C:\Users\BEC.SDA2\Desktop\FinalProject\FinalProject\bin\FinalProject.pdb
+C:\Users\BEC.SDA2\Desktop\FinalProject\FinalProject\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\BEC.SDA2\Desktop\FinalProject\FinalProject\obj\Debug\FinalProject.dll
+C:\Users\BEC.SDA2\Desktop\FinalProject\FinalProject\obj\Debug\FinalProject.pdb
+C:\Users\daniel\Desktop\FinalProject\FinalProject\bin\FinalProject.dll
+C:\Users\daniel\Desktop\FinalProject\FinalProject\bin\FinalProject.pdb
+C:\Users\daniel\Desktop\FinalProject\FinalProject\obj\Debug\FinalProject.csprojResolveAssemblyReference.cache
+C:\Users\daniel\Desktop\FinalProject\FinalProject\obj\Debug\FinalProject.dll
+C:\Users\daniel\Desktop\FinalProject\FinalProject\obj\Debug\FinalProject.pdb

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="ProyectoFinal" Class="BDLINQDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=ES-L-GL6V14J\SQLEXPRESS;Initial Catalog=ProyectoFinal;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="ProyectoFinalConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Usuarios" Member="Usuarios">
+    <Type Name="Usuarios">
+      <Column Name="Nick" Type="System.String" DbType="VarChar(30) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(40) NOT NULL" CanBeNull="false" />
+      <Column Name="Apellidos" Type="System.String" DbType="VarChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="Contraseña" Type="System.Data.Linq.Binary" DbType="VarBinary(255) NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Correo" Type="System.String" DbType="VarChar(150)" CanBeNull="true" />
+      <Column Name="FechaNacimiento" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="FechaInicio" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="Perfil" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Residencia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EstadoCuenta" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Usuarios_PuntuacionUsuario" Member="PuntuacionUsuario" ThisKey="Nick" OtherKey="Nick_Usuario" Type="PuntuacionUsuario" />
+      <Association Name="Usuarios_seguidores" Member="seguidores" ThisKey="Nick" OtherKey="NickUsuarioPrincipal" Type="seguidores" />
+      <Association Name="Usuarios_seguidores1" Member="seguidores1" ThisKey="Nick" OtherKey="NickUsuarioSeguidor" Type="seguidores" />
+      <Association Name="Perfil_Usuarios" Member="Perfil1" ThisKey="Perfil" OtherKey="ID" Type="Perfil" IsForeignKey="true" />
+      <Association Name="Lugar_Usuarios" Member="Lugar" ThisKey="ID_Residencia" OtherKey="ID" Type="Lugar" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.PuntuacionUsuario" Member="PuntuacionUsuario">
+    <Type Name="PuntuacionUsuario">
+      <Column Name="Nick_Usuario" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Juego" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ID_Puntuacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Usuarios_PuntuacionUsuario" Member="Usuarios" ThisKey="Nick_Usuario" OtherKey="Nick" Type="Usuarios" IsForeignKey="true" />
+      <Association Name="Puntuaciones_PuntuacionUsuario" Member="Puntuaciones" ThisKey="ID_Puntuacion" OtherKey="ID" Type="Puntuaciones" IsForeignKey="true" />
+      <Association Name="Juegos_PuntuacionUsuario" Member="Juegos" ThisKey="ID_Juego" OtherKey="ID" Type="Juegos" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Puntuaciones" Member="Puntuaciones">
+    <Type Name="Puntuaciones">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Puntuacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Puntuaciones_PuntuacionUsuario" Member="PuntuacionUsuario" ThisKey="ID" OtherKey="ID_Puntuacion" Type="PuntuacionUsuario" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Perfil" Member="Perfil">
+    <Type Name="Perfil">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Tipo" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="Perfil_Usuarios" Member="Usuarios" ThisKey="ID" OtherKey="Perfil" Type="Usuarios" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Lugar" Member="Lugar">
+    <Type Name="Lugar">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Comunidad" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Provincia" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="Lugar_Usuarios" Member="Usuarios" ThisKey="ID" OtherKey="ID_Residencia" Type="Usuarios" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Juegos" Member="Juegos">
+    <Type Name="Juegos">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NombreJuego" Type="System.String" DbType="VarChar(60) NOT NULL" CanBeNull="false" />
+      <Association Name="Juegos_PuntuacionUsuario" Member="PuntuacionUsuario" ThisKey="ID" OtherKey="ID_Juego" Type="PuntuacionUsuario" />
+    </Type>
+  </Table>
+  <Table Name="dbo.seguidores" Member="seguidores">
+    <Type Name="seguidores">
+      <Column Name="NickUsuarioPrincipal" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NickUsuarioSeguidor" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="NumerodeSeguidor" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="Usuarios_seguidores" Member="Usuarios" ThisKey="NickUsuarioPrincipal" OtherKey="Nick" Type="Usuarios" IsForeignKey="true" />
+      <Association Name="Usuarios_seguidores1" Member="Usuarios1" ThisKey="NickUsuarioSeguidor" OtherKey="Nick" Type="Usuarios" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

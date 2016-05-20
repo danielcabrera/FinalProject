@@ -1,0 +1,206 @@
+
+
+.cabecera
+{
+	background-position: 100%;
+	text-align: right;
+	font-size: xx-large;
+	color: White;
+	background-image: url(../Images/sabadell.bmp);
+	background-attachment:fixed;
+}
+
+.piedepagina
+{
+	font-size: x-small;
+	text-align: right;
+	color: black;
+	margin-top: auto;
+}
+
+.ContentArea
+{
+	margin: 5px 5px 5px 5px;
+	overflow: auto;
+	/*height: 520px;*/		/* 420px; */
+}
+
+/************************** MENU BEGIN **************************/
+
+.staticMenuItemStyle 
+{
+	text-align:center;
+	display:block;
+	padding-left:2px;
+	padding-right:2px;
+	margin-left:0;
+	color:#FFF;
+}
+
+.staticMenuItemSelectedStyle
+{
+	border: solid 1px #000;
+	background-color: #0099CC;
+	color: #000000;
+}
+
+.staticHoverStyle
+{
+	/*background-color: #0099CC;*/
+	color: #0099CC;
+	/*border:solid 1px blue*/
+}
+
+.menuItem 
+{
+	display:block;
+	z-index:50;
+}
+
+.dynamicMenuItemStyle 
+{
+	border:solid 1px #000;
+	background-color:Black;
+	color:#FFF;
+	z-index:200;
+	position:relative;
+}
+
+.NavigationMenu
+{
+	font-family: Verdana;
+	font-size: 10pt;
+	color: #0099CC;
+	font-weight: bold;
+	z-index: 101;
+	background-image: url(../Images/bg-black.gif); /*Negro*/ /*background-image:url(../Images/sabadell.bmp);*/ /*background-image:url('../Images/rojo.bmp');*/ /*Rojo*/ /*background-image:url('../Images/bg-blue.jpg');*/ /*Azul*/ /*background-color:#CC6699;*/ /*Rosa*/
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+}
+
+.menuItemMouseOver {
+	/*background-color: #0099CC;*/
+	color: #0099CC;
+	/*border:solid 1px blue*/
+}
+
+.menuItemSelected
+{
+	/*background-color:Black;*/ /*background-image:url(../Images/bg-black.gif);*/ /*Negro*/ /*background-image:url('../Images/rojo.bmp'); */ /*Rojo*/ /*background-image:url('../Images/bg-blue.jpg');*/ /*Azul*/ /*background-color:#CC6699;*/ /*Rosa*/ /*color:#0099CC;*/
+	border: solid 1px #000;
+	background-color: #0099CC;
+	color: #000000;
+}
+
+.currentNodeStyle,.nodeStyle,.rootNodeStyle,a.siteMapPath 
+{
+	text-decoration:none;
+	font-family:Verdana;
+	font-size:10pt;
+}
+
+/************************** MENU END **************************/
+
+INPUT.boton
+{
+	background-color: #0099CC;
+	color: #FFFFFF;
+	font-size: 14px;
+	border: 1px solid #333333;
+	width: 75px;
+	height: 25px;
+	vertical-align: top;
+}
+.boton:disabled
+{
+	background-color: #0099CC;
+	color: #000000;
+	font-size: 14px;
+	border: 1px solid #333333;
+	width: 75px;
+	height: 25px;
+	vertical-align: top;
+}
+
+.GridColor
+{
+	background-color: #0099CC;
+}
+/* Uso la siguiente entrada para resaltar el header de las columnas que se pueden ordenar 
+   y también resalta el footer de las páginas que puedes alcanzar (click) */
+.GridColor a
+{
+	color: #00FFFF !important;
+}
+.pad10izqder a
+{
+	margin: 10px;
+}
+
+.AlternateRowColor
+{
+	background-color: #F5FFFF;
+}
+
+.Grid
+{
+	border-color: #0099CC;
+	background-color: #6699CC;
+	position: relative;
+	z-index: auto;
+	top: -4px;
+	right: -18px;
+	bottom: 4px;
+	left: 18px;
+	width: 243px;
+	height: 166px;
+}
+
+.GridHeader
+{
+	background-color: #0099CC;
+	position: relative;
+	top: 0px;
+	left: 18px;
+	width: 257px;
+	height: 2px;
+}
+
+.GridRowAlterna
+{
+	border-style: ridge none ridge none;
+	border-width: thin;
+	border-color: #00FFFF;
+	background-color: #F5FFFF;
+}
+
+.GridSelectedRow
+{
+	background-color: #A1DCF2;
+	border-style: ridge none ridge none;
+	border-color: #00FFFF;
+	border-width: medium;
+}
+
+.PanelAcciones
+{
+	 width:200px;
+	 top: 400px;
+	 left: 400px;
+	 height: 89px;
+	 z-index:1;
+	 position:relative;
+}
+
+.Gvcabecera
+{
+	background-color: #0099CC;
+	position: relative;
+
+}
+
+.hiddencol
+{
+    display:none;
+}
